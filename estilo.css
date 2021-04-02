@@ -1,0 +1,765 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+a{
+    color: #000;
+}
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 25px;
+}
+
+p{
+    font-size: 20px;
+}
+
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    height: 100vh;
+    /* width: 100vh; */
+}
+.header-cont{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column: span 6;
+    background-color: #181414;
+    color: #fff;
+    /* font-family: 'DotGothic16', sans-serif; */
+
+}
+
+footer{
+    margin-top: 20px;
+    grid-column: span 6;
+    background-color: #181414;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    height: 100px;
+    width: 100%;
+}
+
+footer div{
+    grid-column: 2/6;
+    /* background-color: red; */
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+footer div h4{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+footer div a{
+    text-decoration:none;
+    color:#fff;
+}
+.header a{
+    color: #fff;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    grid-column: 2/6;
+    background-color: #181414;
+    color:#fff;
+}
+
+.logo-cont{
+    font-size: 25px;
+    font-family: 'DotGothic16', sans-serif;
+    height: 100%;
+}
+
+.logo{
+    height:100%;
+    width: 100%;
+    display: flex;
+}
+.logo a{
+    text-decoration: none;
+    align-self: center;
+}
+
+.header .links{
+    display: flex;
+    float: left;
+    text-align: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.links2{
+    display: none;
+}
+
+.header .links .main-links{
+    float: left;
+    list-style: none;
+    position: relative;
+
+}
+
+.main-links a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 0 2rem;
+    line-height: 5rem;
+    border-bottom: 4px solid transparent;
+    transition: all 1s;
+}
+
+
+.main-links ul{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 40vh;
+    background-color: #181414;
+
+}
+
+.main-links:hover ul{
+    display: flex;
+    flex-direction: column;
+}
+.main-links a:hover{
+    border-bottom: 4px solid #fff;
+}
+.second-links{
+    line-height: unset;
+    white-space: nowrap;
+    width: 100%;
+    list-style: none;
+
+    
+}
+
+.second-links a{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.main{
+    grid-column: 2/span 4;
+    display: block;
+    margin-top: 40px;
+    text-align: start;
+}
+.top-camaras{
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-icon{
+    display:none;
+}
+
+.aboveinfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboveinfo p{
+    margin-top: 20px;
+}
+.grid-camaras{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 400px;
+    margin-top: 20px;
+}
+
+
+.caja{
+    padding-top: 10px;
+    margin:10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* background-color: red; */
+    transition: all 1s;
+}
+
+.caja:hover{
+    background-color: #ccc;
+}
+
+
+.cont-img__camara{
+    width: 85%;
+    height: 60%;
+    align-self: center;
+}
+
+.cont-img__camara img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.caja .product-name{
+    /* background-color: red; */
+    display: block;
+
+}
+
+.caja ul, .caja .product-name{
+    width: 90%;
+    align-self: center;
+}
+
+.caja ul li{
+    list-style: none;
+}
+
+.road-review{
+    display: flex;
+    align-self: center;
+    font-size: 17px;
+    background-color: darkslategray;
+    color: #fff;
+    text-decoration: none;
+    height: 30px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja button{
+    display: block;
+    height: 45px;
+    width: 90%;
+    background-color: #181414;
+    color: #fff;
+    border: none;
+    align-self: center;
+    font-size: 15px;
+}
+.caja button a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.que-son{
+    margin-top: 20px;
+    align-self: center;
+}
+
+.que-son p{
+    margin-top: 10px;
+}
+.review-cont{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.review-box{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-box h2{
+    width: 95%;
+    align-self: center;
+}
+
+.product-image{
+    margin-top: 30px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.product-review{
+    width: 70%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-review h3{
+    color: #fff;
+    background-color: #181414;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-review-charac{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+
+}
+
+.product-review-charac p{
+    margin: 5px;
+    align-self: center;
+
+}
+
+
+
+.caja-2{
+    width: 27%;
+    height: 250px;
+}
+
+.below_info{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pro-cont-product, .contra-cont-product{
+    margin-top: 10px;
+    width: 45%;
+    display: flex;
+    align-self: initial;
+    flex-direction: column;
+}
+
+
+
+.pro-cont-product ul li, .contra-cont-product ul li{
+    list-style: none;
+    padding: 10px 0;
+}
+
+.contra-cont-product p{
+    padding: 5px;
+    background-color: #B43939;
+    color:#fff;
+    text-align: center;
+}
+.pro-cont-product p{
+    padding: 5px;
+    background-color: #5B8939;
+    color: #fff;
+    text-align: center;
+}
+ 
+
+
+
+
+.caja-2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+
+.cont-img__camara2{
+    width: 85%;
+    height: 60%;
+    align-self: center;
+}
+
+.cont-img__camara2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+
+
+.caja-2 button{
+    display: block;
+    height: 45px;
+    width: 90%;
+    background-color: #181414;
+    color: #fff;
+    border: none;
+    align-self: center;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.caja-2 button a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.characterist{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.characterist h2{
+    width: 95%;
+    align-self: center;
+}
+.characterist p{
+    margin-top: 10px;
+    width: 95%;
+    align-self: center;
+}
+
+.moreinfo{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.moreinfo p{
+    width: 95%;
+    display: block;
+    align-self: center;
+    margin-top: 10px;
+}
+.comparativas{
+    display: flex;
+    flex-direction: column;
+}
+
+.comparativas h2{
+    margin-top: 30px;
+    width: 95%; 
+    align-self: center;
+}
+
+.comparativas p{
+    margin-top: 5px;
+    width: 95%;
+    align-self: center;
+}
+
+hr{
+    margin: 20px 0;
+    height: 5px;
+    background-color: #181414;
+    width: 100%;
+}
+
+.tabla{
+    display: grid;
+    grid-template-columns: repeat(8, minmax(100px, 1fr));
+    grid-template-rows: repeat(7, 145px);
+    width: 95%;
+    align-self: center;
+    overflow: auto;
+}
+.tabla-title{
+    height: 60px;
+    align-self: center;
+    background-color: #181414;
+    color: #fff;
+}
+
+.table-name-produ{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.table-name-produ p{
+    font-size: 13px;
+    height: 10%;
+    text-align: center;
+}
+.table-img{
+    height: 80%;
+    width: 90%;
+}
+.table-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+.tabla div{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+
+
+.guide{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.guide p{
+    width: 95%;
+    align-self: center;
+}
+
+.guide h2{
+    width: 95%;
+    align-self: center;
+}
+
+.guide-video{
+    margin-top: 10px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.characterist b{
+    display: block;
+    width: 95%;
+    height: 100%;
+    align-self: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.characterist p b{
+    display: inline;
+
+}
+
+@media screen and (max-width: 1051px){
+    
+    footer{
+        height: 100%;
+    }
+    footer div{
+        grid-column: 2/6;
+        width: 95%;
+        justify-self: center;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 15px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 850px){
+
+    .comparativas{
+        width: 100%;
+    }
+
+    .guide{
+        width: 100%;
+    }
+    
+    .guide-video{
+        margin-top: 10px;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 95%;
+
+    }
+
+
+    .header-cont{
+        grid-column: 1/7;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header{
+        width: 80%;
+        
+    }
+
+    .cont-icon{
+        display: flex;
+        color:#fff;
+        width: 30px;
+        justify-content: center;
+    }
+    .cont-icon i{
+        align-self: center;
+        font-size: 21px;
+
+    }   
+
+
+    .main{
+        grid-column: 1/7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+        justify-self: center;
+        text-align: start;
+        
+    }
+
+    .aboveinfo p, .aboveinfo h1{
+        width: 95%;
+        align-self: center;
+        justify-self:center;
+        
+    }
+
+    .product-name{
+        text-align: center;
+    }
+
+    .logo-cont{
+        height: 100px;
+        width: 100%;
+   
+    }
+    .logo{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    .links li, .link a{
+        display: none;
+    }
+    .product-review h3{
+        background-color: #fff;
+        display: block;
+        color: #000;
+        width: 95%;
+        align-self: center;  
+    }
+    .product-review-charac{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-review-charac p{
+        width: 95%;
+        height: 100%;
+        display: block;
+        align-self: center;
+
+    }
+
+    .product-image{
+        flex-direction: column-reverse;
+    }
+    .caja-2{
+        display: flex;
+    }
+    .caja-2 div{
+        width: 50%;
+        justify-self: center;
+    }
+    .caja-2 button{
+        width: 50%;
+        justify-self: center;
+    }
+
+    .product-image div{
+        width: 100%;
+    }
+    .as{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .below_info{
+        flex-direction: column;
+    }
+    .below_info div{
+        width: 100%;
+    }
+
+
+    .main-links2{
+        width: 100%;
+        height: 100%;
+    }
+    .main-links2 a{
+        color: #fff;
+        background-color: #181414;
+        text-decoration: none;
+        padding: 0 2rem;
+        line-height: 5rem;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        border-bottom: 4px solid #ccc;
+    }
+
+
+
+    .up-icon-cont{
+        display: flex;
+        color:#fff;
+        width: 30px;
+        justify-content: center;
+        display: inline-block;
+
+    }
+
+    .up-icon-cont i{
+        align-self: center;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }   
+
+
+    .second-links2 a{
+        border-bottom: 4px solid transparent;
+    }
+
+    .main-links2 ul{
+        display: none;
+        transition: all 1s;
+    }
+
+    footer div{
+        grid-column: 1/7;
+        width: 85%;
+        justify-self: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+}
+
+@media screen and (max-width: 330px){
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 17px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .grid-camaras{
+        display: grid;
+        grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 375px;
+        margin-top: 20px;
+    }
+
+    .guide-video {
+        margin-top: 10px;
+        display: flex;
+        justify-self: center;
+        align-self: flex-start;
+        width: 100%;
+    }
+    .guide-video iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
